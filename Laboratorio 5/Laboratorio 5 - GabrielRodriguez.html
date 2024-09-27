@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio 5 - Gabriel Rodriguez</title>
+    <link rel="stylesheet" href="colores.css">
+</head>
+<body>
+    <main>
+        <fieldset>
+            <label for="inputField">Escribe un texto o número aquí:</label>
+            <input id="inputField" type="text" placeholder="Escribe aquí...">
+            <label for="colorSelect">Elige un color:</label>
+            <select id="colorSelect">
+                <option value="rojo">Rojo</option>
+                <option value="verde">Verde</option>
+                <option value="azul">Azul</option>
+                <option value="amarillo">Amarillo</option>
+                <option value="naranja">Naranja</option>
+            </select>
+            <p>Texto/Número invertido: <span id="outputSpan"></span></p>
+        </fieldset>
+
+        <footer>
+            Gabriel Rodriguez / 8-956-1405
+        </footer>
+    </main>
+
+    <script>
+        const Utils = (() => {
+            const invertirTexto = (texto) => {
+                return texto.split('').reverse().join('');
+            };
+
+            return {
+                invertirTexto,
+            }
+        })();
+
+        const App = (({ invertirTexto }) => {
+            const htmlElements = {
+                inputField: document.querySelector('#inputField'),
+                colorSelect: document.querySelector('#colorSelect'),
+                outputSpan: document.querySelector('#outputSpan'),
+            };
+
+            const handlers = {
+                onInputChange() {
+                    const texto = htmlElements.inputField.value;
+                    htmlElements.outputSpan.textContent = invertirTexto(texto);
+                },
+                onColorChange() {
+                    const selectedColor = htmlElements.colorSelect.value;
+                    htmlElements.outputSpan.className = selectedColor; 
+                }
+            };
+
+            const bindEvents = () => {
+                htmlElements.inputField.addEventListener('input', handlers.onInputChange);
+                htmlElements.colorSelect.addEventListener('change', handlers.onColorChange);
+            };
+
+            return {
+                init() {
+                    bindEvents();
+                },
+            }
+        })(Utils);
+
+        document.addEventListener('DOMContentLoaded', App.init);
+    </script>
+</body>
+</html>
