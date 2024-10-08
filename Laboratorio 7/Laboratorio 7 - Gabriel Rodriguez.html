@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio #7 - Gabriel Rodriguez</title>
+    <style>
+        /* Estilos básicos */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0 auto;
+            padding: 20px;
+            max-width: 600px;
+        }
+        .input-container {
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        .chart {
+            display: flex;
+            justify-content: space-between;
+        }
+        .bar {
+            height: 50px; /* Se aumenta la altura para mayor visibilidad */
+            margin: 5px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Laboratorio #7 - Implementar aplicación para votación</h1>
+    <div class="input-container">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="color" id="color" value="#ff0000">
+        <label><input type="checkbox" id="colorAleatorio"> Color aleatorio</label>
+        <button onclick="agregarCandidato()">Agregar</button>
+    </div>
+
+    <table id="tabla-candidatos">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Votos</th>
+                <th>Color</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody id="lista-candidatos">
+            <!-- Aquí se listarán los candidatos -->
+        </tbody>
+    </table>
+
+    <div class="chart" id="bar-chart">
+        <!-- Aquí se mostrarán las barras -->
+    </div>
+
+    <footer>
+        <p>Gabriel Rodriguez - 8-956-1405</p>
+    </footer>
+
+    <script src="Laboratorio 7 - Gabriel Rodriguez.js"></script>
+</body>
+</html>
