@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcial 2 - Gabriel Rodriguez</title>
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white;
+        }
+        .container {
+            background-color: white;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 10px;
+            width: 820px;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: #005bb5d3; 
+            transform: scale(1.1); 
+        }
+
+        .number:hover {
+            background-color: black; 
+            transform: scale(1.1); 
+        }
+
+        button {
+            background-color: #007AFF;
+            padding: 10px;
+            color: white;
+            font-size: 26px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: 2px solid black;
+        }
+        .number-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .number {
+            background-color: gray;
+            color: white;
+            font-size: 25px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5px;
+            border-radius: 8px;
+            border: 2px solid black;
+
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 20px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Parcial 2</h1> 
+        <button id="generateBtn">Generar</button>
+        <button id="ascBtn">Asc</button>
+        <button id="descBtn">Desc</button>
+        <div class="number-list" id="numberList"></div>
+        <div class="footer">Gabriel Rodriguez - 8-956-1405</div>
+    </div>
+
+    <script src="Parcial2-GabrielRodriguez.js"></script>
+</body>
+</html>
