@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PokeApi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="github-icon-container">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <img src="GitHub.png" alt="GitHub Icon" class="github-icon">
+        </a>
+    </div>
+    
+    <div class="logo-container">
+        <img src="pokeapi_logo.png" alt="PokeApi Logo" class="logo">
+    </div>
+    <div class="main-container">
+        <h2>Buscador de Pokémon - Gabriel Rodriguez DSV</h2>
+        <p>Busca desde pokémones hasta las habilidades de los mismos.</p>
+        <form class="form-group">
+            <div>
+                <label for="searchInput">Buscar</label>
+                <input type="text" id="searchInput" placeholder="Buscar">
+            </div>
+            <div>
+                <label for="searchType">Tipo de Búsqueda</label>
+                <select id="searchType">
+                    <option value="pokemon">Por Pokémon</option>
+                    <option value="ability">Por Habilidad</option>
+                </select>
+            </div>
+            <button type="button" id="searchButton">Buscar</button>
+            <button type="reset" id="clearButton" style="display: none;">Limpiar</button>
+        </form>
+    </div>
+    <div class="result-container" id="resultContainer"></div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
